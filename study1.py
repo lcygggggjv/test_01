@@ -36,36 +36,36 @@ def recognition_open(img_path):
 
     return img_byte
 
+
 def get_image_bytes(image_path):
     with open(image_path, 'rb') as f:
         image_bytes = f.read()
-    return image_bytes.content
+    return image_bytes
 
 
 def shi(image_file):
 
     # with open(image_file, 'rb')as f:
 
-        # ims = f.read()
+    # ims = f.read()
     base_64 = base64.b64encode(image_file).decode("utf-8")
 
     return base_64
 
 
-
 def admin_login(account, password, image_code):
 
-    res = requests.request(method="post",
+    ress = requests.request(method="post",
                             headers={"content-type": "application/json"},
-                           url="http://mall.lemonban.com:8108/adminLogin",
-                           json={ "principal": account, "credentials": password, "imageCode": image_code})
+                            url="http://mall.lemonban.com:8108/adminLogin",
+                            json={"principal": account, "credentials": password, "imageCode": image_code})
     try:
-        con = res.json()
+        con = ress.json()
+
     except:
-        raise ValueError(f"通过文本显示，异常", res.text)
+        raise ValueError(f"通过文本显示，异常", ress.text)
 
     return con
-
 
 
 if __name__ == '__main__':
