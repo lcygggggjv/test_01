@@ -1,8 +1,8 @@
 import configparser
 import os.path
-
+"""当前父级目录的绝对路径"""
 father_path = os.path.dirname(os.path.abspath(__file__))
-
+print(father_path)
 now_path = os.path.join(father_path, "imgs.png")
 
 utils_path = os.path.join(father_path, "utils.ini")
