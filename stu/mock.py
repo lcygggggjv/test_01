@@ -4,6 +4,7 @@ import string
 import random
 from faker import Faker
 
+
 class Mock:
 
     @staticmethod

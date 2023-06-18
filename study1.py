@@ -3,6 +3,8 @@ import base64
 import requests
 from ddddocr import DdddOcr
 
+import utils
+
 
 def recognition_down(img_url):
     """识别下载的图片验证码"""
@@ -71,10 +73,11 @@ def admin_login(account, password, image_code):
 if __name__ == '__main__':
 
     # img_code = recognition_down("http://mall.lemonban.com:8108/captcha.jpg?uuid=140fe575-e583-4445-84ae-2fc0631f153d")
-    code = get_image_bytes(r"D:\abc_new\test_class\img.png")
-    img_code = shi(code)
+    img_code = recognition_down("http://mall.lemonban.com:8108/captcha.jpg?uuid=140fe575-e583-4445-84ae-2fc0631f153d")
+    # code = get_image_bytes(r"D:\abc_new\test_class\img.png")
+    # img_code = shi(code)
     print(img_code)
-    print(code)
-    res = admin_login("student", "123456a", code)
-
-    print(res)
+    # print(code)
+    # res = admin_login("student", "123456a", code)
+    #
+    # print(res)
