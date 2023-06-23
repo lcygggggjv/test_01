@@ -56,27 +56,52 @@ def menu():
 
 def insert():
 
-    pass
+    student_list = []
+
+    while True:
+
+        ids = input("请输入ID(如1001)：")
+        if not ids:
+            break
+        name = input("请输入姓名：")
+        if not name:
+            break
+        try:
+            eng_grade = int(input("请输入英语成绩："))
+            python = int("请输入python成绩:")
+            java = int(input("请输入java成绩:"))
+
+        except:
+            print("输入无效，不是整数类型，请重新输入")
+            continue
+
+
+
 
 def search():
 
     pass
 
+
 def delete():
 
     pass
+
 
 def update():
 
     pass
 
+
 def sort():
 
     pass
 
+
 def count():
 
     pass
+
 
 def show():
 
