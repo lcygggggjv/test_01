@@ -261,20 +261,43 @@ import requests
 # asyncio.run(main())
 
 
-async def funx():
-    print(1)
+# async def funx():
+#     print(1)
+#
+#     await asyncio.sleep(2)
+#
+#     print(2)
+#
+#     return "返回值"
+#
+#
+# task_list = [
+#        funx(),
+#        funx()
+#     ]
+#
+# done, pending = asyncio.run(asyncio.wait(task_list))
+# print(done)
 
-    await asyncio.sleep(2)
 
-    print(2)
+import time
+from concurrent.futures import Future
+from concurrent.futures.thread import ThreadPoolExecutor
+from concurrent.futures.process import ProcessPoolExecutor
 
-    return "返回值"
+
+def func(value):
+
+    time.sleep(1)
+    print(value)
+    return 123
 
 
-task_list = [
-       funx(),
-       funx()
-    ]
+pool = ThreadPoolExecutor(max_workers=5)
 
-done, pending = asyncio.run(asyncio.wait(task_list))
-print(done)
+for i in range(10):
+
+    fut = pool.submit(func, i)
+    print(fut)
+
+
