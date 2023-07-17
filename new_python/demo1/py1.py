@@ -138,7 +138,110 @@
 # print(num[-3:len(num)])
 
 
-values = 10, 20, 30
-x, y, z = values
-print(x, y, z)
-print(type(values))
+# values = 10, 20, 30
+# x, y, z = values
+# print(x, y, z)
+# print(type(values))
+
+
+# a =['222']
+# b =['ld']
+#
+# print(a+b)
+
+# ps = ['12.3', '23']
+#
+# print('23' in ps)
+#
+# s = '212sdkfk'
+#
+# print('1' in s)
+
+
+# clas = [12, 3, 34, 45, 4]
+#
+# clas.insert(3,9)
+# print(clas)
+# # s = list('mike')
+# # print(s)
+# # s[1:] = list('mary')
+# # print(s)
+
+#
+# a = [1, 3, 65, 8, 90, 0]
+# a.sort()
+# print(a)
+# a.reverse()
+# print(a)
+# print(sorted('ckasie'))
+# value = tuple([1,2,45,6])
+# print(value)
+#
+# num = 1, 2, 3
+# print(num)
+
+# a_tuple = ("李宁", "anta", "tb")
+#
+# for value in a_tuple:
+#
+#     print(f"当前品牌是：{value}")
+#
+# print("-----------------------")
+#
+# new_list = [12, 3.3, 25, 1.3, True, 'helloword', 78, "china", 'anta']
+#
+# sum = 0
+# my_count = 0
+# for values in new_list:
+#
+#     # 如果改元素是整数或者float
+#     if isinstance(values, int) or isinstance(values, float):
+#         print(values)
+#         # 累加该元素
+#         sum += values
+#         # 数值元素个数加1
+#         my_count += 1
+#
+# print(f"综合：{sum}")
+# print(f"平均数：{sum/my_count}")
+
+# my_list = [x for x in range(10)]
+#
+# print(my_list)
+#
+# my_list2 = []
+#
+# for x in range(10):
+#
+#     my_list2.append(x)
+#
+# print(my_list2)
+
+# new_list = []
+#
+# while True:
+#
+#     a = input("请输入数值：")
+#
+#     if a == 'end':
+#         break
+#
+#     try:
+#         new_list.append(int(a))
+#     except ValueError:
+#         print("无效")
+#
+# new_list.reverse()
+#
+# print(new_list)
+
+num1 = [1, 2, 3, 6, 7]
+num2 = [12, 3, 8, 9, 23]
+num = []
+for a in num1[1:4]:
+
+    num2.append(a)
+
+num2.sort()
+NUM = num2
+print(NUM)
