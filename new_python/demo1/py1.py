@@ -1,4 +1,4 @@
-
+import string
 
 # a = "Let'go!. \"一起学python\" "
 # print(a)
@@ -235,13 +235,115 @@
 #
 # print(new_list)
 
-num1 = [1, 2, 3, 6, 7]
-num2 = [12, 3, 8, 9, 23]
-num = []
-for a in num1[1:4]:
+# num1 = [1, 2, 3, 6, 7]
+# num2 = [12, 3, 8, 9, 23]
+# num = []
+# for a in num1[1:4]:
+#
+#     num2.append(a)
+#
+# num2.sort()
+# NUM = num2
+# print(NUM)
 
-    num2.append(a)
+# print("{num: 12}".format(num=54))
+# print("{name: 10}Gates".format(name=2))
+#
+# from math import pi
+#
+# print("{:.2f}".format(pi))
+#
+# print("{chapter:02.0f}".format(chapter=5))
+# print('{:<10.2f}\n {:^10.2f}\n {:>10.2f}'.format(1,2,3))
 
-num2.sort()
-NUM = num2
-print(NUM)
+# print("<" + "hello".center(30, "*") + ">")
+#
+# dirs = '', 'usr', 'local', 'ngix'
+# paths = "C:" + "," .join(dirs)
+# print(paths)
+# list1 = ['2', '23','e', 'os']
+# s= "*"
+# print(s.join(list1))
+#
+# s = ['sdjhertyerghk', 'dqw']
+# print(string.capwords(s[1]))
+#
+#
+# py = '  asdhh '
+# print(py.strip())
+# yu = 'afhdhjaa'
+#
+# print(yu.strip('a'))
+
+
+# s = 'i not like python , and like javascript'
+# tables = s.maketrans('ak', "*$")
+# print(tables)
+#
+# print(len(tables))
+#
+# print(s.translate(tables))
+#
+# tables2 = s.maketrans("ak", "$%", " ")
+# print(s.translate(tables2))
+
+#
+# dict = {}
+#
+# dict[(12, 'asd', True)] = "HEllo"
+# print(dict)
+
+# ids = input("字符：")
+# s = ids.replace(" ", '').lower()   # 将输入的字符空格去除，并且转为小写
+# print(s)
+
+values = {"title": "tt", "url": "xxx.com"}
+# strs = "输出的{title}, {url}"
+# s2 = "{title}{url}"
+# print(strs.format_map(values))
+# print()
+import copy
+from copy import deepcopy
+
+valuesw = {"title": "tt", "url": "xxx.com", "ok": ['21', 23]}
+
+new_1 = copy.copy(valuesw)
+_lis = copy.deepcopy(valuesw)
+valuesw['ok'][1] = 2
+
+print('xin1', new_1)
+print('old', valuesw)
+
+print(_lis)
+
+# import copy
+# a = [1,2,3,[4,5],1]
+# b = a
+# c = copy.copy(a)
+# d = copy.deepcopy(a)
+#
+# a.append(9)
+# a[3].append(6)
+#
+# print(a) 	#[1, 2, 3, [4, 5, 6], 1, 9]
+# print(b)	#[1, 2, 3, [4, 5, 6], 1, 9]
+# print(c)	#[1, 2, 3, [4, 5, 6], 1]
+# print(d)	#[1, 2, 3, [4, 5], 1]
+#
+# print(id(a))	#4594148288
+# print(id(b))	#4594148288
+# print(id(c))	#4594455328
+# print(id(d))	#4592688496
+#
+#
+# x = 'Hello World'
+# y = x
+# z = copy.copy(x)
+# w = copy.deepcopy(x)
+# print(id(x)) #4617118576
+# print(id(y)) #4617118576
+# print(id(z)) #4617118576
+# print(id(w)) #4617118576
+
+# 对于不可变类型(元组、数值，字符串等)为浅拷贝,对象的id值与浅复制原来的值相同
+# 对于可变类型(列表、字典等)为深拷贝，
