@@ -297,24 +297,24 @@ import string
 # s = ids.replace(" ", '').lower()   # 将输入的字符空格去除，并且转为小写
 # print(s)
 
-values = {"title": "tt", "url": "xxx.com"}
-# strs = "输出的{title}, {url}"
-# s2 = "{title}{url}"
-# print(strs.format_map(values))
-# print()
-import copy
-from copy import deepcopy
-
-valuesw = {"title": "tt", "url": "xxx.com", "ok": ['21', 23]}
-
-new_1 = copy.copy(valuesw)
-_lis = copy.deepcopy(valuesw)
-valuesw['ok'][1] = 2
-
-print('xin1', new_1)
-print('old', valuesw)
-
-print(_lis)
+# values = {"title": "tt", "url": "xxx.com"}
+# # strs = "输出的{title}, {url}"
+# # s2 = "{title}{url}"
+# # print(strs.format_map(values))
+# # print()
+# import copy
+# from copy import deepcopy
+#
+# valuesw = {"title": "tt", "url": "xxx.com", "ok": ['21', 23]}
+#
+# new_1 = copy.copy(valuesw)
+# _lis = copy.deepcopy(valuesw)
+# valuesw['ok'][1] = 2
+#
+# print('xin1', new_1)
+# print('old', valuesw)
+#
+# print(_lis)
 
 # import copy
 # a = [1,2,3,[4,5],1]
@@ -347,3 +347,4 @@ print(_lis)
 
 # 对于不可变类型(元组、数值，字符串等)为浅拷贝,对象的id值与浅复制原来的值相同
 # 对于可变类型(列表、字典等)为深拷贝，
+
