@@ -53,4 +53,57 @@ def create_database(db):
     return False
 
 
-create_database(db)
+# create_database(db)
+
+
+def insert_data(db):
+
+    cursor = db.cursor()
+
+    try:
+        # 先删除表记录
+        cursor.execute('DELETE FROM persons')
+        cursor.execute("INSERT INTO persons (id, name, age, address, salary) VALUES(1, 'BILL', 18, 'Caterion', 2000)")
+
+        # 提交数据库里执行
+        db.commit()
+
+        return True
+
+    except Exception as e:
+
+        print(e)
+        db.rollback()
+
+    return False
+
+
+insert_data(db)
+
+
+def select_data(db):
+
+    cursor = db.cursor()
+
+    sql = 'SELECT name, age, salary FROM persons ORDER BY age DESC'
+
+    cursor.execute(sql)
+
+    # 查询全部数据
+    results = cursor.fetchall()
+
+    print(results)
+
+    fields = ['name', 'age', 'salary']
+
+    list1 = []
+
+    for row in results:
+
+        list1.append(dict(zip(fields, row)))
+
+    return json.dumps(list1)
+
+
+s = select_data(db)
+print(s)
